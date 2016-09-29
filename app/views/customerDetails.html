@@ -1,0 +1,76 @@
+﻿<div>
+    <div class="page-header">
+        <h1>Details: <small ><span data-bind="text: details.firstName"></span> <span data-bind="text: details.lastName"></span></small>
+        </h1>
+        <div class="input-group">
+           
+            <div class="btn-group" role="group">
+                <button class="btn btn-info">Edit <i class="fa fa-pencil"></i></button>
+                <button class="btn btn-danger">Delete <i class="fa fa-trash "></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" data-bind="text: details.email"></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Address</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" data-bind="text: details.address"></p>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="page-header">
+                <h1>Rental history <span data-bind="visible: isLoading"><i class="fa fa-spin fa-spinner"></i></span></h1>
+            </div>
+            <div class="table-responsive">
+                <table class="table" data-bind="delegatedHandler: ['click']">
+                    <thead>
+                    <tr>
+                        <th>Serial #</th>
+                        <th>Title</th>
+                        <th>Rental date</th>
+                        <th>Returned</th>
+                    </tr>
+                    </thead>
+                    <tbody data-bind="foreach: history" >
+                    <tr>
+                        <td data-bind="text: serial"></td>
+                        <td data-bind="text: title"></td>
+                        <td data-bind="date: rentalDate"></td>
+                        <td><span data-bind="if:returnDate, date: returnDate"></span> <button data-click="return" class="btn btn-info" data-bind="visible: !returnDate">Return</button> </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6" data-bind="delegatedHandler: ['click']">
+            <div class="page-header">
+                <h1>Rent a movie</h1>
+            </div>
+            <form data-bind="submit: searchMovies" class="form-inline">
+                <div class="input-group">
+                    <input type="text" data-bind="value: term, valueUpdate: 'keyup'" class="form-control" placeholder="Title or serial #">
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </form>
+            <p></p>
+            <div class="list-group" data-bind="visible: availableMovies().length>0, foreach: availableMovies">
+                <a class="list-group-item" href="#" data-click="rent">
+                    <span data-bind="text:title"></span> (<span data-bind="text: serialNumber"></span>)
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

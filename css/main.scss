@@ -1,0 +1,23 @@
+﻿@import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+body {
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+
+.loading {
+    color: #5f6a72;
+
+    h1 {
+        margin-top: 100px;
+        font-size: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 100;
+    }
+
+    .splash-spinner {
+        text-align: center;
+        font-size: 40px;
+    }
+}

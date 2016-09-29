@@ -1,0 +1,30 @@
+﻿<div>
+    <div class="modal-header">
+        <h4 class="modal-title">Create new customer</h4>
+    </div>
+    <form class="bootstrap-form-with-validation" data-bind="submit: ok">
+        <div class="modal-body">
+            <div class="form-group" data-bind="validationElement: firstName">
+                <label class="control-label">First name: </label>
+                <input class="form-control" type="text" autocomplete="off" data-bind="value: firstName, hasFocus: autofocus"/>
+            </div>
+            <div class="form-group" data-bind="validationElement: lastName">
+                <label class="control-label">Last name: </label>
+                <input class="form-control" type="text" autocomplete="off" data-bind="value: lastName"/>
+            </div>
+            <div class="form-group" data-bind="validationElement: email">
+                <label class="control-label">Email: </label>
+                <input class="form-control" type="text" autocomplete="off" data-bind="value: email"/>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Address: </label>
+                <input class="form-control" type="text" autocomplete="off" data-bind="value: address" />
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button data-bind="click: cancel, disable: isLoading" type="button" class="btn btn-default">Cancel</button>
+            <button type="submit" data-bind="disable: isLoading" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

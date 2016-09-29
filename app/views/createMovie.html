@@ -1,0 +1,22 @@
+﻿<div>
+    <div class="modal-header">
+        <h4 class="modal-title">Create movie</h4>
+    </div>
+    <form class="bootstrap-form-with-validation" data-bind="submit: ok">
+        <div class="modal-body">
+            <div class="form-group" data-bind="validationElement: title">
+                <label class="control-label">Title: </label>
+                <input class="form-control" type="text" autocomplete="off" data-bind="value: title, hasFocus: autofocus" />
+            </div>
+            <div class="form-group" data-bind="validationElement: serialNumber">
+                <label class="control-label">Serial #: </label>
+                <input class="form-control" type="text" autocomplete="off" data-bind="value: serialNumber" />
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button data-bind="click: cancel, disable: isLoading" type="button" class="btn btn-default">Cancel</button>
+            <button type="submit" data-bind="disable: isLoading" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

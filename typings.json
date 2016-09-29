@@ -1,0 +1,15 @@
+{
+  "name": "dvd",
+  "dependencies": {},
+  "devDependencies": {},
+  "ambientDependencies": {
+    "bootstrap": "github:DefinitelyTyped/DefinitelyTyped/bootstrap/bootstrap.d.ts#1f0791147c6c145227b1778bb26781a79d516917",
+    "durandal": "github:DefinitelyTyped/DefinitelyTyped/durandal/durandal.d.ts#492db5b03356647a811a9260adfa5d665ece9580",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#5c7d1fcbea9b14df54fc4554d94cb67dfabffd9a",
+    "knockout": "github:DefinitelyTyped/DefinitelyTyped/knockout/knockout.d.ts#47588ba8f9a2ceb05acef2ec2c69263cf057405d",
+    "knockout.validation": "github:DefinitelyTyped/DefinitelyTyped/knockout.validation/knockout.validation.d.ts#9bd707e9aac92e88a12872cb69e4118128de460e",
+    "lodash": "github:DefinitelyTyped/DefinitelyTyped/lodash/lodash.d.ts#bb5916e6451594dbc565c8877dfcbfebde1c8976",
+    "moment": "github:DefinitelyTyped/DefinitelyTyped/moment/moment.d.ts#e919f89ae61ae268a19e6796b4c601173e05d1de",
+    "requirejs": "github:typed-contrib/requirejs/global/typings.json#351aee1093083c1357f06b0fb5e9abb520537140"
+  }
+}
